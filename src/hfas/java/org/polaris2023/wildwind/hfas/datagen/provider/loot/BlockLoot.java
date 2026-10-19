@@ -83,5 +83,10 @@ public class BlockLoot extends BlockLootSubProvider {
         dropSelf(ModBlocks.SCORCHED_TWIG.get());
         dropSelf(ModBlocks.TINY_CACTUS.get());
         dropOther(ModBlocks.FLETCHING_TABLE.get(), Items.FLETCHING_TABLE);
+        dropSelf(ModBlocks.QUICKSAND.get());
+        
+        // 可疑红沙
+        add(ModBlocks.SUSPICIOUS_RED.get(), createSilkTouchOnlyTable(ModBlocks.SUSPICIOUS_RED.get()));
+        dropSelf(ModBlocks.SOUL_JACK_O_LANTERN.get());
     }
 }

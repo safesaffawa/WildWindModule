@@ -76,7 +76,9 @@ public class ZhCnLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.SCORCHED_TWIG, "焦灰枝条");
         addBlock(ModBlocks.TINY_CACTUS, "仙人球");
         addBlock(ModBlocks.FLETCHING_TABLE, "制箭台");
-        addBlock(ModBlocks.QUICKSAND, "流沙");
+        addBlock(ModBlocks.QUICKSAND, "§4流沙");
+        addBlock(ModBlocks.SUSPICIOUS_RED, "§4可疑的红沙");
+        addBlock(ModBlocks.SOUL_JACK_O_LANTERN, "§4灵魂南瓜灯");
 
         // GUI
         add("container.fletching_table", "制箭台");

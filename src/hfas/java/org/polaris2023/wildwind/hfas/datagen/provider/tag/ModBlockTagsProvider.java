@@ -100,6 +100,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         // 制箭台 - 工作站
         addToTag(BlockTags.MINEABLE_WITH_AXE, ModBlocks.FLETCHING_TABLE.get());
 
+        // 可疑红沙 - 用锹挖掘
+        addToTag(BlockTags.MINEABLE_WITH_SHOVEL, ModBlocks.SUSPICIOUS_RED.get());
+
+        // 灵魂南瓜灯 - 用斧挖掘，并可驱离非战斗状态的猪灵
+        addToTag(BlockTags.MINEABLE_WITH_AXE, ModBlocks.SOUL_JACK_O_LANTERN.get());
+        addToTag(BlockTags.PIGLIN_REPELLENTS, ModBlocks.SOUL_JACK_O_LANTERN.get());
+
 
         // ==================== 实体生成有关 ====================
 

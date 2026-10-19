@@ -8,9 +8,11 @@ import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import org.polaris2023.wildwind.hfas.HFASMod;
 import org.polaris2023.wildwind.hfas.block.ModBlocks;
 import org.polaris2023.wildwind.hfas.registry.ModItems;
@@ -112,6 +114,12 @@ public class ModModelProvider extends ModelProvider {
 
         // 流沙 - 使用简单方块模型
         createSimpleBlock(blockModels, ModBlocks.QUICKSAND.get());
+
+        // 可疑红沙 - 基于原版可疑沙：四个模型
+        blockModels.createBrushableBlock(ModBlocks.SUSPICIOUS_RED.get());
+
+        // 灵魂南瓜灯 - 正面 soul_jack_o_lantern，剩下使用原版南瓜贴图
+        blockModels.createPumpkinVariant(ModBlocks.SOUL_JACK_O_LANTERN.get(), TextureMapping.column(Blocks.PUMPKIN));
 
         // ==================== 独立物品 ====================
         simpleItem(itemModels, ModItems.CRAB_CLAW);

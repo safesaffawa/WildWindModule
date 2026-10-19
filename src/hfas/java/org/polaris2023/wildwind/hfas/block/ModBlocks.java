@@ -1,6 +1,6 @@
 package org.polaris2023.wildwind.hfas.block;
 
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -525,6 +525,29 @@ public class ModBlocks {
 
     );
 
+    // 可疑的红沙 (suspicious_red_sand)
+    public static final DeferredBlock<Block> SUSPICIOUS_RED = BLOCKS.registerBlock(
+            "suspicious_red_sand",
+            p -> new BrushableBlock(
+                    Blocks.RED_SAND, 
+                    SoundEvents.BRUSH_SAND, 
+                    SoundEvents.BRUSH_SAND_COMPLETED, p
+                    .mapColor(MapColor.SAND)
+                    .strength(0.5F)
+                    .sound(SoundType.SAND))
+
+    );
+    // 灵魂南瓜灯 (soul_jack_o_lantern)
+    public static final DeferredBlock<Block> SOUL_JACK_O_LANTERN = BLOCKS.registerBlock(
+            "soul_jack_o_lantern",
+            p -> new CarvedPumpkinBlock(p
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .strength(1.0F)
+                    .sound(SoundType.WOOD)
+                    .lightLevel(state -> 10))
+    );
+
+
     public static void blockItems() {
         // 焚烬木套件物品
         ITEMS.registerSimpleBlockItem(BLAZE_LOG);
@@ -582,6 +605,8 @@ public class ModBlocks {
         ITEMS.registerSimpleBlockItem(SCORCHED_TWIG);
         ITEMS.registerSimpleBlockItem(TINY_CACTUS);
         ITEMS.registerSimpleBlockItem(QUICKSAND);
+        ITEMS.registerSimpleBlockItem(SUSPICIOUS_RED);
+        ITEMS.registerSimpleBlockItem(SOUL_JACK_O_LANTERN);
     }
 
     /**

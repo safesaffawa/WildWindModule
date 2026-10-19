@@ -31,6 +31,7 @@ public class ModLootProvider extends LootTableProvider {
                 output,
                 Set.of(),
                 List.of(
+                        new SubProviderEntry(BlockLoot::new, LootContextParamSets.BLOCK),
                         new SubProviderEntry(ModEntityLootSubProvider::new, LootContextParamSets.ENTITY)
                 ),
                 lookupProvider
