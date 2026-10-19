@@ -75,6 +75,7 @@ public class EnUsLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.SCORCHED_TWIG, "Scorched Twig");
         addBlock(ModBlocks.TINY_CACTUS, "Tiny Cactus");
         addBlock(ModBlocks.FLETCHING_TABLE, "Fletching Table");
+        addBlock(ModBlocks.QUICKSAND, "Quicksand");
 
         // GUI
         add("container.fletching_table", "Fletching Table");

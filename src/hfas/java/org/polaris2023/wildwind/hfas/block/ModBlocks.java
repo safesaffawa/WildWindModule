@@ -515,6 +515,16 @@ public class ModBlocks {
                     .sound(SoundType.WOOD))
     );
 
+    // 流沙 (quicksand)
+    public static final DeferredBlock<Block> QUICKSAND = BLOCKS.registerBlock(
+            "quicksand",
+            p -> new Block(p
+                    .mapColor(MapColor.SAND)
+                    .strength(0.5F)
+                    .sound(SoundType.SAND))
+
+    );
+
     public static void blockItems() {
         // 焚烬木套件物品
         ITEMS.registerSimpleBlockItem(BLAZE_LOG);
@@ -571,6 +581,7 @@ public class ModBlocks {
         ITEMS.registerSimpleBlockItem(SCORCHED_GRASS);
         ITEMS.registerSimpleBlockItem(SCORCHED_TWIG);
         ITEMS.registerSimpleBlockItem(TINY_CACTUS);
+        ITEMS.registerSimpleBlockItem(QUICKSAND);
     }
 
     /**

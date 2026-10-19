@@ -110,6 +110,9 @@ public class ModModelProvider extends ModelProvider {
         // 制箭台 - 使用简单方块模型
         createSimpleBlock(blockModels, ModBlocks.FLETCHING_TABLE.get());
 
+        // 流沙 - 使用简单方块模型
+        createSimpleBlock(blockModels, ModBlocks.QUICKSAND.get());
+
         // ==================== 独立物品 ====================
         simpleItem(itemModels, ModItems.CRAB_CLAW);
 
