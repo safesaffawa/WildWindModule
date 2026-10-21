@@ -107,6 +107,31 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         addToTag(BlockTags.MINEABLE_WITH_AXE, ModBlocks.SOUL_JACK_O_LANTERN.get());
         addToTag(BlockTags.PIGLIN_REPELLENTS, ModBlocks.SOUL_JACK_O_LANTERN.get());
 
+        // 砂岩类 - 用镐挖掘
+        addToTag(BlockTags.MINEABLE_WITH_PICKAXE,
+                ModBlocks.CHISELED_QUARTZ_SANDSTONE.get(),
+                ModBlocks.CHISELED_SOUL_SANDSTONE.get(),
+                ModBlocks.CUT_QUARTZ_SANDSTONE.get(),
+                ModBlocks.CUT_SOUL_SANDSTONE.get(),
+                ModBlocks.NITRIFIED_QUARTZ_SANDSTONE.get(),
+                ModBlocks.NITRIFIED_RED_SANDSTONE.get(),
+                ModBlocks.NITRIFIED_SANDSTONE.get(),
+                ModBlocks.NITRIFIED_SOUL_SANDSTONE.get(),
+                ModBlocks.QUARTZ_SANDSTONE.get(),
+                ModBlocks.SOUL_SANDSTONE.get());
+
+        // 沙类 / 流沙 / 可疑沙 - 用锹挖掘
+        addToTag(BlockTags.MINEABLE_WITH_SHOVEL,
+                ModBlocks.QUARTZ_SAND.get(),
+                ModBlocks.QUARTZ_QUICKSAND.get(),
+                ModBlocks.SOUL_QUICKSAND.get(),
+                ModBlocks.SUSPICIOUS_QUARTZ_SAND.get(),
+                ModBlocks.SUSPICIOUS_SOUL_SAND.get());
+
+        // 花类标签
+        addToTag(BlockTags.SMALL_FLOWERS, ModBlocks.ROSE.get(), ModBlocks.SOUL_ROSE.get());
+        addToTag(BlockTags.FLOWERS, ModBlocks.SOUL_ROSE_BUSH.get());
+
 
         // ==================== 实体生成有关 ====================
 
