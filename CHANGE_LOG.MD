@@ -4,6 +4,26 @@ All notable changes to the Wild Wind Module project will be documented in this f
 
 ---
 
+## 拆分为三个模块（core / wilderness / barren）
+
+原 `hfas` 单模块按内容归属拆为三个可独立安装的 mod：
+
+| 目录 | modid | 显示名 | 内容 |
+|:----:|:-----:|:------|:-----|
+| `src/core` | `ww_core` | Wild Wind: Core | 杜鹃木套件、玫瑰 / 灵魂玫瑰（丛）、制箭台与矢术、幼蛛 |
+| `src/wilderness` | `ww_wilderness` | Wild Wind: Wilderness Update | 泥沼蟹、恐鱼、蟹钳 / 尖牙 / 万用蟹钳、延展药水、灵魂南瓜灯 |
+| `src/barren` | `ww_barren` | Wild Wind: Barren Update | 焚烬木 / 灵焰木套件、砂岩 / 沙 / 流沙 / 焦土 / 仙人球 / 可疑沙 |
+
+要点：
+
+- Java 包名同步为 `org.polaris2023.wildwind.core` / `.wilderness` / `.barren`，主类为 `WildWindCore` / `WildWindWilderness` / `WildWindBarren`。
+- `wilderness`、`barren` 在 `neoforge.mods.toml` 中以 `type="required"`、`ordering="AFTER"` 依赖 `ww_core`，Gradle 侧用 `implementation project(":core")`。
+- 共享组件留在 core：`WoodFamily` / `ModWoodFamilies`（仅杜鹃木）、`WindupAttackMob` 与 AI goal、制箭台菜单与方块实体。
+- 每个模块各自拥有 `mixins.json`、访问转换器、datagen 入口与 `assets/data` 命名空间（`ww_core` / `ww_wilderness` / `ww_barren`），原 `ww_hfas` 资源已按归属重新分配。
+- 创造模式物品栏：core 提供 `wild_wind` 标签页，三个模块分别向原版标签页追加自己的条目。
+
+---
+
 ## 项目总结 - HFAS 模块
 
 ### 模组概述
